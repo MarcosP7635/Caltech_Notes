@@ -1,0 +1,437 @@
+<!DOCTYPE html><html>
+<head>
+<title>A Primer for Quantum Mechanics Notes</title>
+<!--Generated on Fri Dec 23 01:37:57 2022 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on October 23rd-.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="ltx-listings.css" type="text/css">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<h1 class="ltx_title ltx_title_document">A Primer for Quantum Mechanics Notes</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Marcos Perez
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">October 23rd-</div>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">This document assumes a working knowledge of Newtonian mechanics and calculus, and is based on <span class="ltx_text ltx_font_italic">A Quantum Mechanics Primer</span> by Daniel T. Gillespie which can be accessed for free below.</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><a href="https://drive.google.com/file/d/1C3RZAP2_0M1WkH4GFrjzIG1PF_kxM1Bi/view?usp=sharing" title="" class="ltx_ref">Publicly accessible PDF on Google Drive</a></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+https://drive.google.com/file/d/1C3RZAP2_0M1WkH4GFrjzIG1PF_kxM1Bi/view?usp=sharing
+</pre>
+</div>
+</li>
+</ul>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>A set, <math id="S1.m1" class="ltx_Math" alttext="\{v_{t}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>v</mi><mi>t</mi></msub><mo stretchy="false">}</mo></mrow></math>, is a list of unique elements <math id="S1.m2" class="ltx_Math" alttext="v_{t}" display="inline"><msub><mi>v</mi><mi>t</mi></msub></math>
+</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">In mathematics an element can be anything, but we are mostly concerned with sets of vectors, which for our purposes are vector spaces. n-dimensional vectors spaces are sets of n-dimensional vectors.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span> <math id="S2.m1" class="ltx_Math" alttext="i=\sqrt{-1}" display="inline"><mrow><mi>i</mi><mo>=</mo><msqrt><mrow><mo>-</mo><mn>1</mn></mrow></msqrt></mrow></math>
+</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">For real <math id="S2.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S2.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, where <math id="S2.p1.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> is the complex number <math id="S2.p1.m4" class="ltx_Math" alttext="z=a+bi" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow></mrow></math> we define <math id="S2.p1.m5" class="ltx_Math" alttext="z^{*}" display="inline"><msup><mi>z</mi><mo>*</mo></msup></math> to be the complex conjugate of <math id="S2.p1.m6" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> where <math id="S2.p1.m7" class="ltx_Math" alttext="z^{*}=a-bi" display="inline"><mrow><msup><mi>z</mi><mo>*</mo></msup><mo>=</mo><mrow><mi>a</mi><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow></mrow></math>. We also define the absolute of <math id="S2.p1.m8" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> to be <math id="S2.p1.m9" class="ltx_Math" alttext="|z|" display="inline"><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow></math> where</p>
+<table id="S2.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E1.m1" class="ltx_Math" alttext="|z|=\sqrt{z^{*}z}=\sqrt{(a+bi)(a-bi)}=\sqrt{a^{2}+b^{2}}" display="block"><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><msqrt><mrow><msup><mi>z</mi><mo>*</mo></msup><mo>⁢</mo><mi>z</mi></mrow></msqrt><mo>=</mo><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt><mo>=</mo><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where we only take the positive value of the square root.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>A Hilbert space, <math id="S3.m1" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> is an infinite-dimensional vector space</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Every vector in <math id="S3.p1.m1" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> maps each real number <math id="S3.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to a complex number <math id="S3.p1.m3" class="ltx_Math" alttext="\psi(x)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> if the function <math id="S3.p1.m4" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math> has a finite norm (we will define norm shortly). The
+inner product of <math id="S3.p1.m5" class="ltx_Math" alttext="\psi_{1}(x)" display="inline"><mrow><msub><mi>ψ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S3.p1.m6" class="ltx_Math" alttext="\psi_{2}(x)" display="inline"><mrow><msub><mi>ψ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is <math id="S3.p1.m7" class="ltx_Math" alttext="\langle\psi_{1}(x)|\psi_{2}(x)\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mrow><msub><mi>ψ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo><mrow><msub><mi>ψ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow></math> where we further define</p>
+<table id="S3.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E2.m1" class="ltx_Math" alttext="\langle\psi_{1}(x)|\psi_{2}(x)\rangle=\int_{-\infty}^{+\infty}\psi^{*}_{1}(x)%
+\psi_{2}(x)dx" display="block"><mrow><mrow><mo stretchy="false">⟨</mo><mrow><msub><mi>ψ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo><mrow><msub><mi>ψ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></msubsup><mrow><msubsup><mi>ψ</mi><mn>1</mn><mo>*</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>ψ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The norm of a function is defined to be the inner product of a function with itself, and by the definition of absolute value in Equation <a href="#S2.E1" title="(1) ‣ 2 = i - 1 ‣ A Primer for Quantum Mechanics Notes" class="ltx_ref ltx_markedasmath ltx_font_italic"><span class="ltx_text ltx_ref_tag">1</span></a></p>
+<table id="S3.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E3.m1" class="ltx_Math" alttext="\text{Norm}(\psi(x))=\int_{-\infty}^{+\infty}\mid\psi(x)\mid^{2}dx" display="block"><mrow><mrow><mtext>Norm</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></msubsup><mrow><msup><mrow><mo>∣</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Two vectors in Hilbert space are orthogonal if their inner product is zero. A set of <math id="S3.p1.m9" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math>-vectors are orthonormal if each element of the set is orthogonal to all the other elements of the set and each element has a norm of 1. 
+<br class="ltx_break">A set of <math id="S3.p1.m10" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math>-vectors are complete if any vector in <math id="S3.p1.m11" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> is a linear combination of the elements of the set. 
+<br class="ltx_break">A set of <math id="S3.p1.m12" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math>-vectors that is both orthonomal and complete is an orthonormal basis set. 
+<br class="ltx_break">We define the delta function</p>
+<table id="S3.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E4.m1" class="ltx_Math" alttext="\delta(x)=\lim_{a\to 0}\frac{1}{|a|\sqrt{\pi}}e^{-{\left(\frac{x}{a}\right)^{2%
+}}}" display="block"><mrow><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>a</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">|</mo><mi>a</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><msup><mrow><mo>(</mo><mfrac><mi mathsize="120%">x</mi><mi mathsize="120%">a</mi></mfrac><mo>)</mo></mrow><mn mathsize="120%">2</mn></msup></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">and further define</p>
+<table id="S3.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E5.m1" class="ltx_Math" alttext="\delta_{ij}=\begin{cases}1&amp;\text{if }i=j\\
+0&amp;\text{if }i\neq j\end{cases}" display="block"><mrow><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>i</mi></mrow><mo>=</mo><mi>j</mi></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>i</mi></mrow><mo>≠</mo><mi>j</mi></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Thus {<math id="S3.p1.m13" class="ltx_Math" alttext="\psi_{i}(x)" display="inline"><mrow><msub><mi>ψ</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>} is an orthonormal set iff <math id="S3.p1.m14" class="ltx_Math" alttext="\langle\psi_{i}(x)|\psi_{j}(x)\rangle=\delta_{ij}" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><mrow><msub><mi>ψ</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo><mrow><msub><mi>ψ</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></math>
+<br class="ltx_break">Similarly, {<math id="S3.p1.m15" class="ltx_Math" alttext="\epsilon_{i}(x)" display="inline"><mrow><msub><mi>ϵ</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>} is an orthonormal basis set iff <math id="S3.p1.m16" class="ltx_Math" alttext="\langle\epsilon_{i}(x)|\epsilon_{j}(x)\rangle=\delta_{ij}" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><mrow><msub><mi>ϵ</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo><mrow><msub><mi>ϵ</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></math> for all positive integers <math id="S3.p1.m17" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> and <math id="S3.p1.m18" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>. 
+<br class="ltx_break">A normed vector has a norm of 1 (it is synonymous with being normalized).</p>
+</div>
+<section id="S3.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1 </span><math id="S3.SS1.m1" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> is an operator, which is a function where <math id="S3.SS1.m2" class="ltx_Math" alttext="\hat{A}\psi=\hat{A}(\psi)" display="inline"><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mi>ψ</mi></mrow><mo>=</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ψ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+</h3>
+
+<div id="S3.SS1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.SS1.p1.m1" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> is pronounced A-hat and iff is short hand for ”if and only if”. An operator <math id="S3.SS1.p1.m2" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> is hermitian iff</p>
+<table id="S3.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E6.m1" class="ltx_Math" alttext="\langle\phi_{1}|\hat{A}\phi_{2}\rangle=\langle\hat{A}\phi_{1}|\phi_{2}\rangle" display="block"><mrow><mrow><mo stretchy="false">⟨</mo><msub><mi>ϕ</mi><mn>1</mn></msub><mo stretchy="false">|</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>ϕ</mi><mn>1</mn></msub></mrow><mo stretchy="false">|</mo><msub><mi>ϕ</mi><mn>2</mn></msub><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Consider if <math id="S3.SS1.p1.m3" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> is Hermitian and has an eigenvector <math id="S3.SS1.p1.m4" class="ltx_Math" alttext="\phi(x)" display="inline"><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> and an eigenvalue <math id="S3.SS1.p1.m5" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>. Then we have by the definitions of eigenvector and eigenvalue <math id="S3.SS1.p1.m6" class="ltx_Math" alttext="\hat{A}\phi=c\phi" display="inline"><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mrow><mi>c</mi><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></math>, and thus we have both <math id="S3.SS1.p1.m7" class="ltx_Math" alttext="(\phi_{1},\hat{A}\phi_{2})=(\phi_{1},c\phi_{2})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>ϕ</mi><mn>1</mn></msub><mo>,</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϕ</mi><mn>1</mn></msub><mo>,</mo><mrow><mi>c</mi><mo>⁢</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S3.SS1.p1.m8" class="ltx_Math" alttext="(\hat{A}\phi_{1},\phi_{2})=(c\phi_{1},\phi_{2})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>ϕ</mi><mn>1</mn></msub></mrow><mo>,</mo><msub><mi>ϕ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>⁢</mo><msub><mi>ϕ</mi><mn>1</mn></msub></mrow><mo>,</mo><msub><mi>ϕ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math>. Since <math id="S3.SS1.p1.m9" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> is Hermitian we have <math id="S3.SS1.p1.m10" class="ltx_Math" alttext="(\hat{A}\phi_{1},\phi_{2})=(\phi_{1},\hat{A}\phi_{2})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>ϕ</mi><mn>1</mn></msub></mrow><mo>,</mo><msub><mi>ϕ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϕ</mi><mn>1</mn></msub><mo>,</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, which shows <math id="S3.SS1.p1.m11" class="ltx_Math" alttext="(\phi_{1},c\phi_{2})=(c\phi_{1},\phi_{2})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>ϕ</mi><mn>1</mn></msub><mo>,</mo><mrow><mi>c</mi><mo>⁢</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>⁢</mo><msub><mi>ϕ</mi><mn>1</mn></msub></mrow><mo>,</mo><msub><mi>ϕ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math>. By our definition of the inner product, the equation <math id="S3.SS1.p1.m12" class="ltx_Math" alttext="(\phi_{1},c\phi_{2})=(c\phi_{1},\phi_{2})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>ϕ</mi><mn>1</mn></msub><mo>,</mo><mrow><mi>c</mi><mo>⁢</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>⁢</mo><msub><mi>ϕ</mi><mn>1</mn></msub></mrow><mo>,</mo><msub><mi>ϕ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> can only be true if <math id="S3.SS1.p1.m13" class="ltx_Math" alttext="c^{*}=c" display="inline"><mrow><msup><mi>c</mi><mo>*</mo></msup><mo>=</mo><mi>c</mi></mrow></math>, which is only true if <math id="S3.SS1.p1.m14" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is real. Thus, the eigenvalues of a Hermitian operator are always real numbers. The converse is also true :) 
+<br class="ltx_break">For some Hermitian operator <math id="S3.SS1.p1.m15" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> the set of its eigenvectors <math id="S3.SS1.p1.m16" class="ltx_Math" alttext="\{\alpha_{n}\}=\alpha_{1}(x),\alpha_{2}(x),..." display="inline"><mrow><mrow><mo stretchy="false">{</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>α</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math> form an eigenbasis iff {<math id="S3.SS1.p1.m17" class="ltx_Math" alttext="\alpha_{n}" display="inline"><msub><mi>α</mi><mi>n</mi></msub></math>} is an orthonormal basis set.</p>
+</div>
+</section>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Chapter 4</h2>
+
+<section id="S4.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.1 </span>Postulates of Quantum Mechanics</h3>
+
+<div id="S4.SS1.p1" class="ltx_para">
+<p class="ltx_p">Consider a particle of mass <math id="S4.SS1.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> that can only move in the <math id="S4.SS1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> direction and experiences some potential given by <math id="S4.SS1.p1.m3" class="ltx_Math" alttext="V(x)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Every physical state corresponds to some normed <math id="I2.i1.p1.m1" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math>-vector <math id="I2.i1.p1.m2" class="ltx_Math" alttext="\psi_{t}(x)" display="inline"><mrow><msub><mi>ψ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and <math id="I2.i1.p1.m3" class="ltx_Math" alttext="\psi_{t}(x)" display="inline"><mrow><msub><mi>ψ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> contains everything that can be known about the system. Note that <math id="I2.i1.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> does not depend on the time <math id="I2.i1.p1.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. 
+<br class="ltx_break"></p>
+</div>
+<div id="I2.i1.p2" class="ltx_para">
+<p class="ltx_p">We can also write the vector as <math id="I2.i1.p2.m1" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, but one must know that this is still only a function of <math id="I2.i1.p2.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and that <math id="I2.i1.p2.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> only serves to label different vectors within the Hilbert space.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">There is a one-to-one correspondence between every physical observable (<math id="I2.i2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>) and a Hermitian operator <math id="I2.i2.p1.m2" class="ltx_Math" alttext="(\hat{A})" display="inline"><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">)</mo></mrow></math> with eigenbasis {<math id="I2.i2.p1.m3" class="ltx_Math" alttext="\alpha_{n}" display="inline"><msub><mi>α</mi><mi>n</mi></msub></math>} such that for every positive integer <math id="I2.i2.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, we have</p>
+<table id="S4.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E7.m1" class="ltx_Math" alttext="\hat{A}\alpha_{n}(x)=A_{n}(x)\alpha_{n}(x)" display="block"><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where the only possible values of the observable <math id="I2.i2.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> are the eigenvalues {<math id="I2.i2.p1.m6" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>}. 
+<br class="ltx_break"></p>
+</div>
+<div id="I2.i2.p2" class="ltx_para">
+<p class="ltx_p">Thus since {<math id="I2.i2.p2.m1" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>} is discrete, <math id="I2.i2.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is quantized :) 
+<br class="ltx_break">We will assume this of all physical observables going forward. 
+<br class="ltx_break">Although <math id="I2.i2.p2.m3" class="ltx_Math" alttext="\psi_{t}(x)" display="inline"><mrow><msub><mi>ψ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> can change with time, <math id="I2.i2.p2.m4" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> is independent of time.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">The probability that a measurement of the physical observable <math id="I2.i3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> will yield the eigenvalue <math id="I2.i3.p1.m2" class="ltx_Math" alttext="A_{k}" display="inline"><msub><mi>A</mi><mi>k</mi></msub></math> is <math id="I2.i3.p1.m3" class="ltx_Math" alttext="|(\alpha_{k}|\psi_{t})|^{2}" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mi>k</mi></msub><mo stretchy="false">|</mo><msub><mi>ψ</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><msup><mo stretchy="false">|</mo><mn>2</mn></msup></mrow></math> where the eigenbasis of <math id="I2.i3.p1.m4" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> is {<math id="I2.i3.p1.m5" class="ltx_Math" alttext="\alpha_{i}" display="inline"><msub><mi>α</mi><mi>i</mi></msub></math>}. This is strongest possible prediction of the measurement. 
+<br class="ltx_break"></p>
+</div>
+<div id="I2.i3.p2" class="ltx_para">
+<p class="ltx_p">Thus if two measurements are done on a system with the same state, even with infinite precision, the two measurements may disagree.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">Regardless of the state vector before a measurement, immediately after a measurement a state vector will be of the form <math id="I2.i4.p1.m1" class="ltx_Math" alttext="c\alpha_{n}" display="inline"><mrow><mi>c</mi><mo>⁢</mo><msub><mi>α</mi><mi>n</mi></msub></mrow></math> where <math id="I2.i4.p1.m2" class="ltx_Math" alttext="|c|=1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>c</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> and the true value of the measurement was <math id="I2.i4.p1.m3" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p">Every physical system has a Hermitian operator <math id="I2.i5.p1.m1" class="ltx_Math" alttext="\hat{H}" display="inline"><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover></math> named the Hamiltonian with an eigenbasis {<math id="I2.i5.p1.m2" class="ltx_Math" alttext="\eta_{k}" display="inline"><msub><mi>η</mi><mi>k</mi></msub></math>} where</p>
+<table id="S4.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E8.m1" class="ltx_Math" alttext="\hat{H}\eta_{k}=E_{k}\eta_{k}" display="block"><mrow><mrow><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>η</mi><mi>k</mi></msub></mrow><mo>=</mo><mrow><msub><mi>E</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>η</mi><mi>k</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr>
+</table>
+<p class="ltx_p">and the only allowed values of the total energy of the system are {<math id="I2.i5.p1.m3" class="ltx_Math" alttext="E_{k}" display="inline"><msub><mi>E</mi><mi>k</mi></msub></math>}.
+Furthermore, as long as the system isn’t disturbed</p>
+<table id="S4.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E9.m1" class="ltx_Math" alttext="i\hbar\frac{\partial}{\partial t}\psi(x,t)=\hat{H}\psi(x,t)" display="block"><mrow><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Importantly, Equation <a href="#S4.E9" title="(9) ‣ 5. ‣ 4.1 Postulates of Quantum Mechanics ‣ 4 Chapter 4 ‣ A Primer for Quantum Mechanics Notes" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a> is known as the Schrodinger Equation.</p>
+</div>
+</li>
+<li id="I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I2.i6.p1" class="ltx_para">
+<p class="ltx_p">Position, <math id="I2.i6.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and momentum, <math id="I2.i6.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, have the corresponding operators <math id="I2.i6.p1.m3" class="ltx_Math" alttext="\hat{X}=x" display="inline"><mrow><mover accent="true"><mi>X</mi><mo stretchy="false">^</mo></mover><mo>=</mo><mi>x</mi></mrow></math> and <math id="I2.i6.p1.m4" class="ltx_Math" alttext="\hat{P}=-i\hbar\frac{d}{dx}" display="inline"><mrow><mover accent="true"><mi>P</mi><mo stretchy="false">^</mo></mover><mo>=</mo><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mrow></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">As shown in Section <a href="#S3.SS1" title="3.1 ^ A is an operator, which is a function where = ⁢ ^ A ψ ⁢ ^ A ( ψ ) ‣ 3 A Hilbert space, H is an infinite-dimensional vector space ‣ A Primer for Quantum Mechanics Notes" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.1</span></a>, if <math id="S4.SS1.p1.m4" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> is hermitian then all of its eigenvalues are real. Thus the function <math id="S4.SS1.p1.m5" class="ltx_Math" alttext="f(A)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> is also a physical observable if <math id="S4.SS1.p1.m6" class="ltx_Math" alttext="f(A)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> is of the form</p>
+<table id="S4.E10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E10.m1" class="ltx_Math" alttext="f(A)=\sum_{n=0}^{\infty}c_{n}A^{n}\ ,\ c_{n}\in\mathbb{R}\ \forall\ n" display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><mpadded width="+5pt"><msup><mi>A</mi><mi>n</mi></msup></mpadded></mrow></mrow></mrow><mo rspace="7.5pt">,</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>∈</mo><mrow><mpadded width="+5pt"><mi>ℝ</mi></mpadded><mo>⁢</mo><mrow><mo rspace="7.5pt">∀</mo><mi>n</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S4.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.2 </span>Schrodinger Equations</h3>
+
+<div id="S4.SS2.p1" class="ltx_para">
+<p class="ltx_p">We will now derive the time independent and time dependent Schrodinger Equations.
+<br class="ltx_break">Since total energy is the sum of kinetic energy and potential energy we have a time-independent Hamiltonian Operator</p>
+<table id="S4.E11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E11.m1" class="ltx_Math" alttext="\hat{H}=-\frac{1}{2m}\hat{P}^{2}+V(\hat{X})" display="block"><mrow><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mover accent="true"><mi>P</mi><mo stretchy="false">^</mo></mover><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>X</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr>
+</table>
+<p class="ltx_p">By Postulates <a href="#I2.i5" title="5. ‣ 4.1 Postulates of Quantum Mechanics ‣ 4 Chapter 4 ‣ A Primer for Quantum Mechanics Notes" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a> and <a href="#I2.i6" title="6. ‣ 4.1 Postulates of Quantum Mechanics ‣ 4 Chapter 4 ‣ A Primer for Quantum Mechanics Notes" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a></p>
+<table id="S4.E12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E12.m1" class="ltx_Math" alttext="\hat{H}=-\frac{1}{2m}\hbar^{2}\frac{d^{2}}{dx^{2}}+V(x)\\
+" display="block"><mrow><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(12)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Now we can substitute a time-independent wave function <math id="S4.SS2.p1.m1" class="ltx_Math" alttext="\psi(x)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and by Postulate <a href="#I2.i5" title="5. ‣ 4.1 Postulates of Quantum Mechanics ‣ 4 Chapter 4 ‣ A Primer for Quantum Mechanics Notes" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a></p>
+<table id="S4.E13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E13.m1" class="ltx_Math" alttext="\hat{H}\psi(x)=-\frac{1}{2m}\hbar^{2}\frac{d^{2}\psi}{dx^{2}}+V(x)\psi(x)=E_{n%
+}\phi(x)" display="block"><mrow><mrow><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>ψ</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(13)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Equation <a href="#S4.E13" title="(13) ‣ 4.2 Schrodinger Equations ‣ 4 Chapter 4 ‣ A Primer for Quantum Mechanics Notes" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a> is the time-independent Schrodinger Equation.
+We will now derive a time-dependent form of the Schrodinger Equation. From Equation <a href="#S4.E12" title="(12) ‣ 4.2 Schrodinger Equations ‣ 4 Chapter 4 ‣ A Primer for Quantum Mechanics Notes" class="ltx_ref"><span class="ltx_text ltx_ref_tag">12</span></a> we can substitute a time-dependent wave function <math id="S4.SS2.p1.m2" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></p>
+<table id="S4.E14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E14.m1" class="ltx_Math" alttext="\hat{H}\psi(x,t)=-\frac{1}{2m}\hbar^{2}\frac{\partial^{2}\psi(x,t)}{\partial x%
+^{2}}+V(x)\psi(x,t)" display="block"><mrow><mrow><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mrow><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>ψ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(14)</span></td>
+</tr>
+</table>
+<p class="ltx_p">and from the Schrodinger Equation (<a href="#S4.E9" title="(9) ‣ 5. ‣ 4.1 Postulates of Quantum Mechanics ‣ 4 Chapter 4 ‣ A Primer for Quantum Mechanics Notes" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a>), we have</p>
+<table id="S4.E15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E15.m1" class="ltx_Math" alttext="\begin{split}\displaystyle i\hbar\frac{\partial}{\partial t}\psi(x,t)=\hat{H}%
+\psi(x,t)=-\frac{1}{2m}\hbar^{2}\frac{\partial^{2}\psi(x,t)}{\partial x^{2}}+V%
+(x)\psi(x,t)\\
+\displaystyle i\hbar\frac{\partial}{\partial t}\psi(x,t)=-\frac{1}{2m}\hbar^{2%
+}\frac{\partial^{2}\psi(x,t)}{\partial x^{2}}+V(x)\psi(x,t)\end{split}" display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mrow><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>ψ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mrow><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>ψ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(15)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where the second line is the time-dependent Schrodinger Equation.
+Importantly, <math id="S4.SS2.p1.m3" class="ltx_Math" alttext="|\psi(x,t)|^{2}" display="inline"><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></math> is a probability density function.
+</p>
+</div>
+</section>
+<section id="S4.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.3 </span>Compatibility</h3>
+
+<div id="S4.SS3.p1" class="ltx_para">
+<p class="ltx_p">Two observables <math id="S4.SS3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.SS3.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are compatible if the measurement of one is certain not to change a measurement of the other. For instance, the eigenstate of a given measurement of <math id="S4.SS3.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, <math id="S4.SS3.p1.m4" class="ltx_Math" alttext="\hat{B}\beta_{n}=B_{n}\beta_{n}" display="inline"><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>β</mi><mi>n</mi></msub></mrow><mo>=</mo><mrow><msub><mi>B</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>β</mi><mi>n</mi></msub></mrow></mrow></math> for some positive integer <math id="S4.SS3.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> may not necessarily coincide with a previous measurement of <math id="S4.SS3.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, <math id="S4.SS3.p1.m7" class="ltx_Math" alttext="\hat{A}\alpha_{n}=A_{n}\alpha_{n}" display="inline"><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>α</mi><mi>n</mi></msub></mrow><mo>=</mo><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>α</mi><mi>n</mi></msub></mrow></mrow></math>.</p>
+</div>
+<section id="S4.SS3.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.3.1 </span>Compatibility Theorem</h4>
+
+<div id="S4.SS3.SSS1.p1" class="ltx_para">
+<p class="ltx_p">For any two physical observables <math id="S4.SS3.SSS1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.SS3.SSS1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> with corresponding operators <math id="S4.SS3.SSS1.p1.m3" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> and <math id="S4.SS3.SSS1.p1.m4" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></math>, any one of the following statements implies the other two.</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I3.i1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are compatible observables</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> and <math id="I3.i2.p1.m2" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></math> possess a common eigenbasis</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i3.p1.m1" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> and <math id="I3.i3.p1.m2" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></math> commute.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Thus since it is clear that the position and momentum operators do not commute, the measurement of one must change a measurement of the other. Which is a conceptual justification for Heisenberg’s uncertainty principle :)</p>
+</div>
+</section>
+</section>
+<section id="S4.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.4 </span>Heisenberg Uncertainty Principle</h3>
+
+<div id="S4.SS4.p1" class="ltx_para">
+<p class="ltx_p">The Heisenberg Uncertainty princple states that the uncertainties of <math id="S4.SS4.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.SS4.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> for any state <math id="S4.SS4.p1.m3" class="ltx_Math" alttext="\psi_{t}(x)" display="inline"><mrow><msub><mi>ψ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> satisfy</p>
+<table id="S4.E16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E16.m1" class="ltx_Math" alttext="\Delta\hat{A}\cdot\Delta\hat{B}\geq\frac{1}{2}\mid c\mid" display="block"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow><mo>⋅</mo><mi mathvariant="normal">Δ</mi></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></mrow><mo>≥</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>∣</mo><mi>c</mi><mo>∣</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(16)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Where we define <math id="S4.SS4.p1.m4" class="ltx_Math" alttext="c=\hat{A}\hat{B}-\hat{B}\hat{A}" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></mrow><mo>-</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow></mrow></mrow></math> to be the commutator of <math id="S4.SS4.p1.m5" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></math> and <math id="S4.SS4.p1.m6" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></math>, and we take the uncertainty <math id="S4.SS4.p1.m7" class="ltx_Math" alttext="\Delta\hat{A}" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow></math> in the measurement of an observable <math id="S4.SS4.p1.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to be</p>
+<table id="S4.E17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E17.m1" class="ltx_Math" alttext="\Delta\hat{A}=\sqrt{\langle\hat{A}^{2}\rangle-\langle\hat{A}\rangle^{2}}" display="block"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow><mo>=</mo><msqrt><mrow><mrow><mo stretchy="false">⟨</mo><msup><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo stretchy="false">⟩</mo></mrow><mo>-</mo><msup><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">⟩</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(17)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The generalized uncertainty relation</p>
+<table id="S4.E18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E18.m1" class="ltx_Math" alttext="\Delta\hat{A}\cdot\Delta\hat{B}\geq\frac{1}{2}|\langle\psi|[\hat{A}\hat{B}-%
+\hat{B}\hat{A}]\Psi\rangle|" display="block"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow><mo>⋅</mo><mi mathvariant="normal">Δ</mi></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></mrow><mo>≥</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>ψ</mi><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></mrow><mo>-</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(18)</span></td>
+</tr>
+</table>
+<p class="ltx_p">implies the Heisenberg Uncertainty principle. One can see that by the definition of the inner product (Equation <span class="ltx_ref ltx_missing_label ltx_ref_self">LABEL:eqn:innProd</span>)</p>
+<table id="S4.E19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E19.m1" class="ltx_Math" alttext="\begin{split}\displaystyle\Delta\hat{A}\cdot\Delta\hat{B}\geq\frac{1}{2}|\int_%
+{-\infty}^{+\infty}\psi^{*}(x)[\hat{A}\hat{B}-\hat{B}\hat{A}]\Psi(x)dx|\\
+\displaystyle\Delta\hat{A}\cdot\Delta\hat{B}\geq\frac{1}{2}|\int_{-\infty}^{+%
+\infty}\Psi^{*}(x)c\Psi(x)dx|\end{split}" display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow><mo>⋅</mo><mi mathvariant="normal">Δ</mi></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></mrow><mo>≥</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></msubsup><mrow><msup><mi>ψ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></mrow><mo>-</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow><mo>⋅</mo><mi mathvariant="normal">Δ</mi></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></mrow><mo>≥</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></msubsup><mrow><msup><mi mathvariant="normal">Ψ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi mathvariant="normal">Ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(19)</span></td>
+</tr>
+</table>
+<p class="ltx_p">By the definition of the commutator <math id="S4.SS4.p1.m9" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math></p>
+<table id="S4.E20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E20.m1" class="ltx_Math" alttext="\begin{split}\displaystyle\Delta\hat{A}\cdot\Delta\hat{B}\geq\frac{1}{2}|\int_%
+{-\infty}^{+\infty}\Psi^{*}(x)c\Psi(x)dx|\\
+\displaystyle\Delta\hat{A}\cdot\Delta\hat{B}\geq\frac{1}{2}|c\int_{-\infty}^{+%
+\infty}\Psi^{*}(x)\Psi(x)dx|\\
+\end{split}" display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow><mo>⋅</mo><mi mathvariant="normal">Δ</mi></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></mrow><mo>≥</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></msubsup><mrow><msup><mi mathvariant="normal">Ψ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi mathvariant="normal">Ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow><mo>⋅</mo><mi mathvariant="normal">Δ</mi></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></mrow><mo>≥</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></msubsup><mrow><msup><mi mathvariant="normal">Ψ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(20)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="S4.SS4.p1.m10" class="ltx_Math" alttext="\Psi(x)" display="inline"><mrow><mi mathvariant="normal">Ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> has a norm of 1</p>
+<table id="S4.E21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E21.m1" class="ltx_Math" alttext="\Delta\hat{A}\cdot\Delta\hat{B}\geq\frac{1}{2}|c|" display="block"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow><mo>⋅</mo><mi mathvariant="normal">Δ</mi></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></mrow><mo>≥</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>c</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(21)</span></td>
+</tr>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Dec 23 01:37:57 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
