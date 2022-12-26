@@ -1,8 +1,8 @@
 <!DOCTYPE html><html>
 <head>
 <title>A Primer for Quantum Mechanics Notes</title>
-<!--Generated on Fri Dec 23 08:03:22 2022 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
-<!--Document created on October 23rd-.-->
+<!--Generated on Mon Dec 26 23:16:12 2022 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on October 23, 2022-.-->
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="LaTeXML.css" type="text/css">
@@ -12,14 +12,15 @@
 <body>
 <div class="ltx_page_main">
 <div class="ltx_page_content">
-<article class="ltx_document">
-<h1 class="ltx_title ltx_title_document">A Primer for Quantum Mechanics Notes</h1>
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document"> A Primer for Quantum Mechanics Notes
+</h1>
 <div class="ltx_authors">
 <span class="ltx_creator ltx_role_author">
 <span class="ltx_personname">Marcos Perez
 </span></span>
 </div>
-<div class="ltx_date ltx_role_creation">October 23rd-</div>
+<div class="ltx_date ltx_role_creation">October 23, 2022-</div>
 
 <section id="Sx1" class="ltx_section">
 <h2 class="ltx_title ltx_title_section">Links and Introduction</h2>
@@ -48,7 +49,8 @@
 </div>
 </li>
 </ul>
-<p class="ltx_p">This document assumes a working knowledge of calculus, statistics, linear algebra, and Newtonian mechanics. The content is loosely based on <span class="ltx_text ltx_font_italic">A Quantum Mechanics Primer</span> by Daniel T. Gillespie which can be accessed for free below.</p>
+<p class="ltx_p">This document assumes a working knowledge of calculus, statistics, linear algebra, and Newtonian mechanics. The content is loosely based on <span class="ltx_text ltx_font_italic">A Quantum Mechanics Primer</span> by Daniel T. Gillespie which can be accessed for free below.
+</p>
 <ul id="I2" class="ltx_itemize">
 <li id="I2.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_itemize">•</span> 
@@ -77,7 +79,7 @@ https://drive.google.com/file/d/1C3RZAP2_0M1WkH4GFrjzIG1PF_kxM1Bi/view?usp=shari
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
 </tr>
 </table>
-<p class="ltx_p">In mathematics an element can be anything, but we are mostly concerned with sets of vectors, which for our purposes are vector spaces. n-dimensional vectors spaces are sets of n-dimensional vectors. The word iff is short hand for ”if and only if”</p>
+<p class="ltx_p">where the symbol <math id="S1.p1.m1" class="ltx_Math" alttext="\forall" display="inline"><mo>∀</mo></math> means ”for all”, <math id="S1.p1.m2" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> refers to the set of all positive whole numbers, and <math id="S1.p1.m3" class="ltx_Math" alttext="\in" display="inline"><mo>∈</mo></math> mean ”is an element of”. In mathematics an element can be anything, but we are mostly concerned with sets of vectors, which for our purposes are vector spaces. n-dimensional vectors spaces are sets of n-dimensional vectors. The word iff is short hand for ”if and only if.”</p>
 </div>
 </section>
 <section id="S2" class="ltx_section">
@@ -107,7 +109,7 @@ https://drive.google.com/file/d/1C3RZAP2_0M1WkH4GFrjzIG1PF_kxM1Bi/view?usp=shari
 <span class="ltx_tag ltx_tag_subsection">3.1 </span>A Hilbert space is an infinite-dimensional vector space</h3>
 
 <div id="S3.SS1.p1" class="ltx_para">
-<p class="ltx_p">Every vector in <math id="S3.SS1.p1.m1" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> maps each real number <math id="S3.SS1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to a complex number <math id="S3.SS1.p1.m3" class="ltx_Math" alttext="\psi(x)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> if the function <math id="S3.SS1.p1.m4" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math> has a finite norm (we will define norm shortly). The
+<p class="ltx_p">Every vector in a Hilbert space <math id="S3.SS1.p1.m1" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> maps each real number <math id="S3.SS1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to a complex number <math id="S3.SS1.p1.m3" class="ltx_Math" alttext="\psi(x)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> if the function <math id="S3.SS1.p1.m4" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math> has a finite norm (we will define norm shortly). The
 inner product of <math id="S3.SS1.p1.m5" class="ltx_Math" alttext="\psi_{1}(x)" display="inline"><mrow><msub><mi>ψ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S3.SS1.p1.m6" class="ltx_Math" alttext="\psi_{2}(x)" display="inline"><mrow><msub><mi>ψ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is <math id="S3.SS1.p1.m7" class="ltx_Math" alttext="\langle\psi_{1}(x)|\psi_{2}(x)\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mrow><msub><mi>ψ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo><mrow><msub><mi>ψ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow></math> where we further define</p>
 <table id="S3.E3" class="ltx_equation ltx_eqn_table">
 
@@ -168,7 +170,8 @@ inner product of <math id="S3.SS1.p1.m5" class="ltx_Math" alttext="\psi_{1}(x)" 
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
 </tr>
 </table>
-<p class="ltx_p">and further define</p>
+<p class="ltx_p">and further define
+</p>
 <table id="S3.E8" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -236,8 +239,7 @@ inner product of <math id="S3.SS1.p1.m5" class="ltx_Math" alttext="\psi_{1}(x)" 
 <span class="ltx_tag ltx_tag_enumerate">2.</span> 
 <div id="I3.i2.p1" class="ltx_para">
 <p class="ltx_p">There is a one-to-one correspondence between every physical observable A and a Hermitian operator A-hat with eigenbasis
-<math id="I3.i2.p1.m1" class="ltx_Math" alttext="\{\alpha_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> such that for every positive integer, we have
-</p>
+<math id="I3.i2.p1.m1" class="ltx_Math" alttext="\{\alpha_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> such that for every positive integer, we have</p>
 <table id="S4.E11" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -300,8 +302,7 @@ Furthermore, as long as the system isn’t disturbed</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(14)</span></td>
 </tr>
 </table>
-<p class="ltx_p">Importantly, Equation <a href="#S4.E14" title="(14) ‣ 5. ‣ 4.1 Postulates of Quantum Mechanics ‣ 4 Chapter 4 ‣ A Primer for Quantum Mechanics Notes" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a> is known as the Schrodinger Equation.
-</p>
+<p class="ltx_p">Importantly, Equation <a href="#S4.E14" title="(14) ‣ 5. ‣ 4.1 Postulates of Quantum Mechanics ‣ 4 Chapter 4 ‣ A Primer for Quantum Mechanics Notes" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a> is known as the Schrodinger Equation.</p>
 </div>
 </li>
 <li id="I3.i6" class="ltx_item" style="list-style-type:none;">
@@ -321,6 +322,7 @@ Furthermore, as long as the system isn’t disturbed</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(15)</span></td>
 </tr>
 </table>
+<p class="ltx_p">where <math id="S4.SS1.p1.m7" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> refers to the set of all real numbers</p>
 </div>
 </section>
 <section id="S4.SS2" class="ltx_subsection">
@@ -424,7 +426,8 @@ Importantly, <math id="S4.SS2.p1.m2" class="ltx_Math" alttext="|\Psi(x,t)|^{2}" 
 </div>
 </li>
 </ul>
-<p class="ltx_p">Thus since it is clear that the position and momentum operators do not commute, the measurement of one must change a measurement of the other. Which is a conceptual justification for Heisenberg’s uncertainty principle :)</p>
+<p class="ltx_p">Thus since it is clear that the position and momentum operators do not commute, the measurement of one must change a measurement of the other. Which is a conceptual justification for Heisenberg’s uncertainty principle :)
+</p>
 </div>
 </section>
 </section>
@@ -655,7 +658,7 @@ x)\rangle=\langle\Psi(x)|\hat{A}^{2}\Psi(x)\rangle-\langle\Psi(x)|2\hat{A}%
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(38)</span></td>
 </tr>
 </table>
-<p class="ltx_p">From the definition of the inner product, in analogy with the dot product in linear algebra, we have the Schwarz Inequality</p>
+<p class="ltx_p">Since the inner product is analogous with the dot product in linear algebra. we have the Schwarz Inequality</p>
 <table id="S4.E39" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -743,7 +746,7 @@ x)\rangle=\langle\Psi(x)|\hat{A}^{2}\Psi(x)\rangle-\langle\Psi(x)|2\hat{A}%
 </article>
 </div>
 <footer class="ltx_page_footer">
-<div class="ltx_page_logo">Generated  on Fri Dec 23 08:03:22 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Mon Dec 26 23:16:12 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 </body>
